@@ -19,7 +19,13 @@
 					"loggingLevel": "Basic"
 				}
 			}
-		]
+		],
+		"variables": {
+			"p1": {
+				"type": "String",
+				"defaultValue": "123"
+			}
+		}
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
 }
