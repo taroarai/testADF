@@ -1,6 +1,20 @@
 {
 	"name": "AzureSqlTable1",
 	"properties": {
-		"type": "AzureSqlTable"
-	}
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "c1",
+				"type": "Int32"
+			},
+			{
+				"name": "c2",
+				"type": "Int32"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[t11]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }
