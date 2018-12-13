@@ -1,6 +1,10 @@
 {
 	"name": "AzureSqlTable1",
 	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
 		"type": "AzureSqlTable",
 		"structure": [
 			{
@@ -13,7 +17,7 @@
 			}
 		],
 		"typeProperties": {
-			"tableName": "[dbo].[t11]"
+			"tableName": "[dbo].[t1]"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
