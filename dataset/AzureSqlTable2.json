@@ -1,0 +1,24 @@
+{
+	"name": "AzureSqlTable2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "c1",
+				"type": "Int32"
+			},
+			{
+				"name": "c2",
+				"type": "Int32"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[t100]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
