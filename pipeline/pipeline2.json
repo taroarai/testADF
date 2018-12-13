@@ -31,7 +31,14 @@
 						"writeBatchSize": 10000
 					},
 					"enableStaging": false,
-					"dataIntegrationUnits": 0
+					"dataIntegrationUnits": 0,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"c1": "c1",
+							"c2": "c2"
+						}
+					}
 				},
 				"inputs": [
 					{
