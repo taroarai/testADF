@@ -24,12 +24,17 @@
 				],
 				"typeProperties": {
 					"source": {
-						"type": "BlobSource",
-						"recursive": false
+						"type": "SqlSource"
 					},
 					"enableStaging": false,
 					"dataIntegrationUnits": 0
-				}
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		]
 	},
