@@ -26,12 +26,22 @@
 					"source": {
 						"type": "SqlSource"
 					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000
+					},
 					"enableStaging": false,
 					"dataIntegrationUnits": 0
 				},
 				"inputs": [
 					{
 						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTable2",
 						"type": "DatasetReference"
 					}
 				]
