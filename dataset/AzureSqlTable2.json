@@ -5,12 +5,6 @@
 			"referenceName": "AzureSqlDatabase1",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"c1": {
-				"type": "String",
-				"defaultValue": "1"
-			}
-		},
 		"type": "AzureSqlTable",
 		"structure": [
 			{
