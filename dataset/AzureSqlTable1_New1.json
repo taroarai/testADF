@@ -1,0 +1,32 @@
+{
+	"name": "AzureSqlTable1_New1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "c1",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "c2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "c3",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[t1]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

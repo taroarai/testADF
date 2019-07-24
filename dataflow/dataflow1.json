@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "AzureSqlTable1_New1",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
@@ -21,7 +21,7 @@
 					"name": "sink1"
 				}
 			],
-			"script": "\n\nsource(output(\n\t\t\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tlimit: 0,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> source1\nsource1 select() ~> Select1\nSelect1 sink(input(\n\t\tc1 as integer,\n\t\tc2 as integer\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'table',\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false) ~> sink1"
+			"script": "\n\nsource(output(\n\t\tc1 as integer,\n\t\tc2 as string,\n\t\tc3 as timestamp\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tlimit: 0,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> source1\nsource1 select() ~> Select1\nSelect1 sink(input(\n\t\tc1 as integer,\n\t\tc2 as integer\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'table',\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false) ~> sink1"
 		}
 	}
 }
