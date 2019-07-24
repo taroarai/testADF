@@ -9,7 +9,7 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"tableName": "[dbo].[t100]"
+			"tableName": "[dbo].[t1]"
 		}
 	}
 }
