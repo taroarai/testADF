@@ -7,7 +7,23 @@
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": [],
+		"schema": [
+			{
+				"name": "c1",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "c2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "c3",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
 		"typeProperties": {
 			"tableName": "[dbo].[t1]"
 		}
