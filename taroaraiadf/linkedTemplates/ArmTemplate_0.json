@@ -189,7 +189,7 @@
 							"name": "sink1"
 						}
 					],
-					"script": "\n\nsource(output(\n\t\tc1 as integer,\n\t\tc2 as string,\n\t\tc3 as timestamp\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tlimit: 100,\n\tbatchSize: 100,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> source1\nsource1 select() ~> Select1\nSelect1 derive(test = toString(null())) ~> DerivedColumn1\nDerivedColumn1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tfilePattern:('PRODUCT_' + toString(currentDate(), 'yyyyMMdd') + '[].csv')) ~> sink1"
+					"script": "\n\nsource(output(\n\t\tc1 as integer,\n\t\tc2 as string,\n\t\tc3 as timestamp\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tlimit: 100,\n\tbatchSize: 100,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> source1\nsource1 select() ~> Select1\nSelect1 derive(test = toString(null())) ~> DerivedColumn1\nDerivedColumn1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tfilePattern:('PRODUCT_' + toString(currentDate(), 'yyyyMMdd') + '[n].csv')) ~> sink1"
 				}
 			},
 			"dependsOn": [
