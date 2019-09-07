@@ -16,7 +16,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"url": "https://management.azure.com/subscriptions/2d942f4c-f2ae-4bc5-aa52-63fec8f25329/resourcegroups/testadf/providers/Microsoft.DataFactory/factories/taroaraiadf?api-version=2019-05-10",
-					"method": "GET"
+					"method": "GET",
+					"authentication": {
+						"type": "MSI",
+						"resource": "https://management.azure.com/"
+					}
 				}
 			},
 			{
