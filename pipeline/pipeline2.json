@@ -96,7 +96,7 @@
 					"headers": {
 						"Content-Type": "application/x-www-form-urlencoded"
 					},
-					"body": "grant_type=client_credentials&client_id=391dd3e3-7860-4929-9dc5-370ae00e7f75&client_secret=8KgOhVwukPz.BmU9elrJqwfVFUJ_89**&resource=https://management.azure.com/\n"
+					"body": "grant_type=client_credentials&client_id=391dd3e3-7860-4929-9dc5-370ae00e7f75&client_secret=%2B2XqjF%404Q_Fzf%2BHz2uwk7b-%2ADW%3F2%3F0WV&resource=https://management.azure.com/\n"
 				}
 			}
 		],
