@@ -3,38 +3,11 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Web1",
-				"type": "WebActivity",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "7.00:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"url": "https://management.azure.com/subscriptions/2d942f4c-f2ae-4bc5-aa52-63fec8f25329/resourcegroups/testSouceCentralUS/providers/Microsoft.Sql/servers/taroarai-sqldb/databases/testc?api-version=2018-06-01-preview",
-					"method": "GET",
-					"authentication": {
-						"type": "MSI",
-						"resource": "https://management.azure.com/"
-					}
-				}
-			},
-			{
 				"name": "Copy Data1",
 				"type": "Copy",
 				"dependsOn": [
 					{
 						"activity": "Web1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					},
-					{
-						"activity": "Web2",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -54,7 +27,7 @@
 						"storeSettings": {
 							"type": "HttpReadSettings",
 							"requestMethod": "GET",
-							"additionalHeaders": "Authorization: Bearer @{activity('web2').output.access_token}",
+							"additionalHeaders": "Authorization: Bearer @{activity('web1').output.access_token}",
 							"requestTimeout": ""
 						}
 					},
@@ -79,7 +52,7 @@
 				]
 			},
 			{
-				"name": "Web2",
+				"name": "Web1",
 				"type": "WebActivity",
 				"dependsOn": [],
 				"policy": {
