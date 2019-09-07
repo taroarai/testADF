@@ -43,14 +43,30 @@
 						"type": "JsonSource",
 						"storeSettings": {
 							"type": "HttpReadSettings",
-							"requestMethod": "GET"
+							"requestMethod": "GET",
+							"additionalHeaders": {
+								"value": "\"?token=\" + @{activity('web1').output.access_token}",
+								"type": "Expression"
+							},
+							"requestTimeout": ""
 						}
+					},
+					"sink": {
+						"type": "DocumentDbCollectionSink",
+						"nestingSeparator": ".",
+						"writeBehavior": "insert"
 					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
 						"referenceName": "Json1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DocumentDbCollection1",
 						"type": "DatasetReference"
 					}
 				]
