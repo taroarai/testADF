@@ -54,7 +54,6 @@
 						"storeSettings": {
 							"type": "HttpReadSettings",
 							"requestMethod": "GET",
-							"additionalHeaders": "?token=@{activity('web1').output.properties.databaseId}",
 							"requestTimeout": ""
 						}
 					},
