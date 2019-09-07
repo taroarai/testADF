@@ -6,6 +6,9 @@
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "DocumentDbCollection"
+		"type": "DocumentDbCollection",
+		"typeProperties": {
+			"collectionName": "cont1"
+		}
 	}
 }
