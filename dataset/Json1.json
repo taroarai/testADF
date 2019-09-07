@@ -1,0 +1,17 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HttpServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "/subscriptions/2d942f4c-f2ae-4bc5-aa52-63fec8f25329/resourcegroups/testadf/providers/Microsoft.DataFactory/factories/taroaraiadf"
+			}
+		}
+	}
+}
