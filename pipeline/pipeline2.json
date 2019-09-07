@@ -49,7 +49,7 @@
 							"type": "HttpReadSettings",
 							"requestMethod": "GET",
 							"additionalHeaders": {
-								"value": "\"?token=\" + @{activity('web1').output.properties.databaseId}",
+								"value": "?token=@{activity('web1').output.properties.databaseId}",
 								"type": "Expression"
 							},
 							"requestTimeout": ""
