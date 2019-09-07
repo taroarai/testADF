@@ -7,6 +7,128 @@
 		},
 		"annotations": [],
 		"type": "DocumentDbCollection",
+		"structure": [
+			{
+				"name": "id",
+				"type": "String"
+			},
+			{
+				"name": "_rid",
+				"type": "String"
+			},
+			{
+				"name": "_self",
+				"type": "String"
+			},
+			{
+				"name": "_etag",
+				"type": "String"
+			},
+			{
+				"name": "sku.name",
+				"type": "String"
+			},
+			{
+				"name": "sku.tier",
+				"type": "String"
+			},
+			{
+				"name": "sku.capacity",
+				"type": "Int64"
+			},
+			{
+				"name": "kind",
+				"type": "String"
+			},
+			{
+				"name": "properties.collation",
+				"type": "String"
+			},
+			{
+				"name": "properties.maxSizeBytes",
+				"type": "Int64"
+			},
+			{
+				"name": "properties.status",
+				"type": "String"
+			},
+			{
+				"name": "properties.databaseId",
+				"type": "String"
+			},
+			{
+				"name": "properties.creationDate",
+				"type": "DateTime"
+			},
+			{
+				"name": "properties.currentServiceObjectiveName",
+				"type": "String"
+			},
+			{
+				"name": "properties.requestedServiceObjectiveName",
+				"type": "String"
+			},
+			{
+				"name": "properties.defaultSecondaryLocation",
+				"type": "String"
+			},
+			{
+				"name": "properties.catalogCollation",
+				"type": "String"
+			},
+			{
+				"name": "properties.zoneRedundant",
+				"type": "Boolean"
+			},
+			{
+				"name": "properties.earliestRestoreDate",
+				"type": "DateTime"
+			},
+			{
+				"name": "properties.readScale",
+				"type": "String"
+			},
+			{
+				"name": "properties.readReplicaCount",
+				"type": "Int64"
+			},
+			{
+				"name": "properties.currentSku.name",
+				"type": "String"
+			},
+			{
+				"name": "properties.currentSku.tier",
+				"type": "String"
+			},
+			{
+				"name": "properties.currentSku.capacity",
+				"type": "Int64"
+			},
+			{
+				"name": "properties.storageAccountType",
+				"type": "String"
+			},
+			{
+				"name": "location",
+				"type": "String"
+			},
+			{
+				"name": "name",
+				"type": "String"
+			},
+			{
+				"name": "type",
+				"type": "String"
+			},
+			{
+				"name": "_attachments",
+				"type": "String"
+			},
+			{
+				"name": "_ts",
+				"type": "Int64"
+			}
+		],
 		"typeProperties": {
 			"collectionName": "cont1"
 		}
