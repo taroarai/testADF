@@ -11,7 +11,7 @@
 			"location": {
 				"type": "HttpServerLocation",
 				"relativeUrl": {
-					"value": "@concat('subscriptions/2d942f4c-f2ae-4bc5-aa52-63fec8f25329/resourcegroups/testSouceCentralUS/providers/Microsoft.Sql/servers/taroarai-sqldb/databases/testc/providers/microsoft.insights/metrics?api-version=2018-01-01&metricnames=cpu_percent&timespan=',addminutes(utcnow(),-30),utcnow())",
+					"value": "@concat('subscriptions/2d942f4c-f2ae-4bc5-aa52-63fec8f25329/resourcegroups/testSouceCentralUS/providers/Microsoft.Sql/servers/taroarai-sqldb/databases/testc/providers/microsoft.insights/metrics?api-version=2018-01-01&metricnames=cpu_percent&timespan=',addminutes(utcnow(),-30),'/',utcnow())",
 					"type": "Expression"
 				}
 			}
