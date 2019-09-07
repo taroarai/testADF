@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-				"relativeUrl": "/subscriptions/2d942f4c-f2ae-4bc5-aa52-63fec8f25329/resourcegroups/testadf/providers/Microsoft.DataFactory/factories/taroaraiadf"
+				"relativeUrl": "/subscriptions/2d942f4c-f2ae-4bc5-aa52-63fec8f25329/resourcegroups/testadf/providers/Microsoft.DataFactory/factories/taroaraiadf?token=@{activity('web1').output.properties.databaseId}"
 			}
 		}
 	}
