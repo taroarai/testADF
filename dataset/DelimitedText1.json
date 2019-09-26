@@ -13,7 +13,7 @@
 				"container": "test"
 			},
 			"columnDelimiter": ",",
-			"escapeChar": "\\",
+			"escapeChar": "\"",
 			"quoteChar": "\""
 		},
 		"schema": []
