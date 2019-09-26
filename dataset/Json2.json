@@ -19,13 +19,24 @@
 				"id": {
 					"type": "string"
 				},
-				"array": {
+				"array1": {
 					"type": "array",
 					"items": {
 						"type": "object",
 						"properties": {
 							"subid": {
 								"type": "string"
+							},
+							"array2": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"someid": {
+											"type": "integer"
+										}
+									}
+								}
 							}
 						}
 					}
