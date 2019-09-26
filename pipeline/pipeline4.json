@@ -41,15 +41,24 @@
 							},
 							{
 								"source": {
-									"path": "['subid']"
+									"path": "$['array1'][0]['subid']"
 								},
 								"sink": {
 									"name": "c2",
 									"type": "Int32"
 								}
+							},
+							{
+								"source": {
+									"path": "['someid']"
+								},
+								"sink": {
+									"name": "c3",
+									"type": "Int32"
+								}
 							}
 						],
-						"collectionReference": "$['array']"
+						"collectionReference": "$['array1'][0]['array2']"
 					}
 				},
 				"inputs": [
