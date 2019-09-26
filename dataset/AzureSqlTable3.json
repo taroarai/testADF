@@ -17,6 +17,11 @@
 				"name": "c2",
 				"type": "int",
 				"precision": 10
+			},
+			{
+				"name": "c3",
+				"type": "int",
+				"precision": 10
 			}
 		],
 		"typeProperties": {
