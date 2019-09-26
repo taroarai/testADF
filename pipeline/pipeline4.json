@@ -41,7 +41,7 @@
 							},
 							{
 								"source": {
-									"path": "$['array'][1]['subid']"
+									"path": "['subid']"
 								},
 								"sink": {
 									"name": "c2",
@@ -49,7 +49,7 @@
 								}
 							}
 						],
-						"collectionReference": ""
+						"collectionReference": "$['array']"
 					}
 				},
 				"inputs": [
