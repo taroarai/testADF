@@ -26,7 +26,40 @@
 					"sink": {
 						"type": "AzureSqlSink"
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['id']"
+								},
+								"sink": {
+									"name": "c1",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "['subid']"
+								},
+								"sink": {
+									"name": "c2",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['someid']"
+								},
+								"sink": {
+									"name": "c3",
+									"type": "Int32"
+								}
+							}
+						],
+						"collectionReference": "$['array1']"
+					}
 				},
 				"inputs": [
 					{
