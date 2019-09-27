@@ -24,7 +24,15 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings",
+							"copyBehavior": "FlattenHierarchy"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings",
+							"quoteAllText": true
+						}
 					},
 					"enableStaging": false,
 					"translator": {
@@ -32,33 +40,30 @@
 						"mappings": [
 							{
 								"source": {
+									"path": "['array2'][0]['someid']"
+								},
+								"sink": {
+									"path": "someid"
+								}
+							},
+							{
+								"source": {
+									"path": "['subid']"
+								},
+								"sink": {
+									"path": "subid"
+								}
+							},
+							{
+								"source": {
 									"path": "$['id']"
 								},
 								"sink": {
-									"name": "c1",
-									"type": "Int32"
-								}
-							},
-							{
-								"source": {
-									"path": "$['array1'][0]['subid']"
-								},
-								"sink": {
-									"name": "c2",
-									"type": "Int32"
-								}
-							},
-							{
-								"source": {
-									"path": "['someid']"
-								},
-								"sink": {
-									"name": "c3",
-									"type": "Int32"
+									"path": "id"
 								}
 							}
 						],
-						"collectionReference": "$['array1'][0]['array2']"
+						"collectionReference": "$['array1']"
 					}
 				},
 				"inputs": [
@@ -69,7 +74,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSqlTable3",
+						"referenceName": "Json3",
 						"type": "DatasetReference"
 					}
 				]
