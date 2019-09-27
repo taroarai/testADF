@@ -58,7 +58,7 @@
 									"path": "['array2']"
 								},
 								"sink": {
-									"path": "$['array2']"
+									"path": "$['someid']"
 								}
 							}
 						],
