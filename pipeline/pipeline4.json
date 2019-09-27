@@ -55,10 +55,10 @@
 							},
 							{
 								"source": {
-									"path": "$['array2']"
+									"path": "['array2']"
 								},
 								"sink": {
-									"path": "$['someid']"
+									"path": "$['array2']"
 								}
 							}
 						],
