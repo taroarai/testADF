@@ -24,7 +24,14 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings",
+							"quoteAllText": true
+						}
 					},
 					"enableStaging": false,
 					"translator": {
@@ -35,8 +42,7 @@
 									"path": "$['id']"
 								},
 								"sink": {
-									"name": "c1",
-									"type": "Int32"
+									"path": "$['id']"
 								}
 							},
 							{
@@ -44,8 +50,7 @@
 									"path": "['subid']"
 								},
 								"sink": {
-									"name": "c2",
-									"type": "Int32"
+									"path": "$['subid']"
 								}
 							},
 							{
@@ -53,8 +58,7 @@
 									"path": "$['array2']"
 								},
 								"sink": {
-									"name": "c3",
-									"type": "Int32"
+									"path": "$['someid']"
 								}
 							}
 						],
@@ -69,7 +73,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSqlTable3",
+						"referenceName": "Json2",
 						"type": "DatasetReference"
 					}
 				]
