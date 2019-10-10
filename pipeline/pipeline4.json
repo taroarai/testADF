@@ -5,7 +5,14 @@
 			{
 				"name": "Copy data1",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -32,7 +39,7 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "['subid']"
+									"path": "$['array1'][0]['subid']"
 								},
 								"sink": {
 									"name": "c1",
@@ -41,7 +48,7 @@
 							},
 							{
 								"source": {
-									"path": "['array2'][0]['someid']"
+									"path": "$['array1'][0]['array2'][0]['someid']"
 								},
 								"sink": {
 									"name": "c2",
@@ -58,7 +65,7 @@
 								}
 							}
 						],
-						"collectionReference": "$['array1']"
+						"collectionReference": "$['array1'][@pipeline().parameters.temp]['array2']"
 					}
 				},
 				"inputs": [
@@ -73,8 +80,29 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.temp",
+						"type": "Expression"
+					}
+				}
 			}
 		],
+		"parameters": {
+			"temp": {
+				"type": "array",
+				"defaultValue": [
+					1,
+					2,
+					3
+				]
+			}
+		},
 		"annotations": []
 	}
 }
