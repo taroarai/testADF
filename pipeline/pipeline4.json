@@ -32,26 +32,29 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "$['id']"
-								},
-								"sink": {
-									"path": "$['id']"
-								}
-							},
-							{
-								"source": {
 									"path": "['subid']"
 								},
 								"sink": {
-									"path": "$['subid']"
+									"name": "c1",
+									"type": "Int32"
 								}
 							},
 							{
 								"source": {
-									"path": "['array2']"
+									"path": "['array2'][0]['someid']"
 								},
 								"sink": {
-									"path": "$['someid']"
+									"name": "c2",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['id']"
+								},
+								"sink": {
+									"name": "c3",
+									"type": "Int32"
 								}
 							}
 						],
