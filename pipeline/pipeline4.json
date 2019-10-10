@@ -53,7 +53,7 @@
 										},
 										{
 											"source": {
-												"path": "$['array1'][0]['array2'][0]['someid']"
+												"path": "['someid']"
 											},
 											"sink": {
 												"name": "c2",
@@ -70,7 +70,7 @@
 											}
 										}
 									],
-									"collectionReference": "$['array1'][@pipeline().parameters.temp]['array2']"
+									"collectionReference": "$['array1'][0]['array2']"
 								}
 							},
 							"inputs": [
