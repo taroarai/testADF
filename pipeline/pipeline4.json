@@ -44,7 +44,7 @@
 									"mappings": [
 										{
 											"source": {
-												"path": "['array2'][0]['someid']"
+												"path": "['someid']"
 											},
 											"sink": {
 												"name": "c2",
@@ -53,7 +53,7 @@
 										},
 										{
 											"source": {
-												"path": "['subid']"
+												"path": "$['array1'][0]['subid']"
 											},
 											"sink": {
 												"name": "c1",
@@ -70,7 +70,7 @@
 											}
 										}
 									],
-									"collectionReference": "$['array1']"
+									"collectionReference": "$['array1'][0]['array2']"
 								}
 							},
 							"inputs": [
