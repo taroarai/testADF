@@ -53,7 +53,7 @@
 										},
 										{
 											"source": {
-												"path": "$['array1'][pipeline().parameters.temp]['subid']"
+												"path": "$['array1'][@item()]['subid']"
 											},
 											"sink": {
 												"name": "c2",
