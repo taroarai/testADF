@@ -53,7 +53,7 @@
 										},
 										{
 											"source": {
-												"path": "$['array1'][0]['subid']"
+												"path": "$['array1'][@item()]['subid']"
 											},
 											"sink": {
 												"name": "c2",
