@@ -36,6 +36,82 @@
 									}
 								},
 								"sink": {
+									"type": "JsonSink",
+									"storeSettings": {
+										"type": "AzureBlobStorageWriteSettings"
+									},
+									"formatSettings": {
+										"type": "JsonWriteSettings",
+										"quoteAllText": true
+									}
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"mappings": [
+										{
+											"source": {
+												"path": "['subid']"
+											},
+											"sink": {
+												"path": "subid"
+											}
+										},
+										{
+											"source": {
+												"path": "$['id']"
+											},
+											"sink": {
+												"path": "id"
+											}
+										},
+										{
+											"source": {
+												"path": "$['array2']"
+											},
+											"sink": {
+												"path": "array"
+											}
+										}
+									],
+									"collectionReference": "$['array1']"
+								}
+							},
+							"inputs": [
+								{
+									"referenceName": "Json2",
+									"type": "DatasetReference"
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "Json3",
+									"type": "DatasetReference"
+								}
+							]
+						},
+						{
+							"name": "Copy data1_copy1_copy1",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "JsonSource",
+									"storeSettings": {
+										"type": "AzureBlobStorageReadSettings",
+										"recursive": true,
+										"wildcardFileName": "*.json"
+									}
+								},
+								"sink": {
 									"type": "AzureSqlSink"
 								},
 								"enableStaging": false,
@@ -44,16 +120,16 @@
 									"mappings": [
 										{
 											"source": {
-												"path": "$['id']"
+												"path": "['someid']"
 											},
 											"sink": {
-												"name": "c1",
+												"name": "c3",
 												"type": "Int32"
 											}
 										},
 										{
 											"source": {
-												"path": "$['array1'][@item()]['subid']"
+												"path": "$['array1'][0]['subid']"
 											},
 											"sink": {
 												"name": "c2",
@@ -62,10 +138,10 @@
 										},
 										{
 											"source": {
-												"path": "['someid']"
+												"path": "$['id']"
 											},
 											"sink": {
-												"name": "c3",
+												"name": "c1",
 												"type": "Int32"
 											}
 										}
