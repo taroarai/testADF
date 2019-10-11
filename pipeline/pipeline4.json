@@ -62,7 +62,7 @@
 										},
 										{
 											"source": {
-												"path": "$['array1'][0]['array2'][0]['someid']"
+												"path": "['someid']"
 											},
 											"sink": {
 												"name": "c3",
@@ -70,7 +70,7 @@
 											}
 										}
 									],
-									"collectionReference": "$['array1'][@item()]['array2']"
+									"collectionReference": "$['array1'][0]['array2']"
 								}
 							},
 							"inputs": [
