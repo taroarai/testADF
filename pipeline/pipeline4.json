@@ -94,9 +94,7 @@
 			"temp": {
 				"type": "array",
 				"defaultValue": [
-					1,
-					2,
-					3
+					1
 				]
 			}
 		},
