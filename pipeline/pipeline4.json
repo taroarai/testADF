@@ -44,10 +44,10 @@
 									"mappings": [
 										{
 											"source": {
-												"path": "['someid']"
+												"path": "$['id']"
 											},
 											"sink": {
-												"name": "c3",
+												"name": "c1",
 												"type": "Int32"
 											}
 										},
@@ -62,10 +62,10 @@
 										},
 										{
 											"source": {
-												"path": "$['id']"
+												"path": "$['array1'][0]['array2'][0]['someid']"
 											},
 											"sink": {
-												"name": "c1",
+												"name": "c3",
 												"type": "Int32"
 											}
 										}
