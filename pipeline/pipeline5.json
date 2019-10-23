@@ -19,11 +19,34 @@
 						"type": "CosmosDbSqlApiSource",
 						"preferredRegions": []
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['MyGuid']"
+								},
+								"sink": {
+									"name": "c1",
+									"type": "Guid"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "CosmosDbSqlApiCollection1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTable4",
 						"type": "DatasetReference"
 					}
 				]
