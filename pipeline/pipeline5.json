@@ -28,11 +28,37 @@
 						"mappings": [
 							{
 								"source": {
+									"path": "$['id']"
+								}
+							},
+							{
+								"source": {
 									"path": "$['MyGuid']"
-								},
-								"sink": {
-									"name": "c1",
-									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"path": "$['_rid']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['_self']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['_etag']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['_attachments']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['_ts']"
 								}
 							}
 						]
