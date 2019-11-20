@@ -15,7 +15,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "t10"
+			"table": "t12"
 		}
 	}
 }
