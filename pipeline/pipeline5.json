@@ -16,8 +16,17 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "CosmosDbSqlApiSource",
-						"preferredRegions": []
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"wildcardFolderPath": "act*",
+							"wildcardFileName": "*",
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
 					},
 					"sink": {
 						"type": "AzureSqlSink"
@@ -40,7 +49,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "CosmosDbSqlApiCollection1",
+						"referenceName": "DelimitedText2",
 						"type": "DatasetReference"
 					}
 				],
