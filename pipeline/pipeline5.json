@@ -21,7 +21,7 @@
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
 							"wildcardFolderPath": "act*",
-							"wildcardFileName": "*",
+							"wildcardFileName": "test*",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -37,11 +37,22 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "$['MyGuid']"
+									"type": "String",
+									"ordinal": 1
 								},
 								"sink": {
 									"name": "c1",
-									"type": "Guid"
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 2
+								},
+								"sink": {
+									"name": "c2",
+									"type": "Int32"
 								}
 							}
 						]
